@@ -15,7 +15,7 @@ var sweepCmd = &cobra.Command{
 			return err
 		}
 
-		if err := utils.Sweep(); err != nil {
+		if err := utils.SweepKeyrings(); err != nil {
 			return err
 		}
 

@@ -6,7 +6,7 @@ import (
 
 const service = "abacate"
 
-func Sweep() error {
+func SweepKeyrings() error {
 	return keyring.DeleteAll(service)
 }
 
