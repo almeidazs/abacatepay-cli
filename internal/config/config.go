@@ -50,7 +50,6 @@ func Sweep() error {
 	return os.WriteFile(path, []byte("{}"), 0o600)
 }
 
-
 type Profile struct {
 	CreatedAt string `json:"created_at"`
 	Verified  bool   `json:"verified,omitempty"`
