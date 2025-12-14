@@ -8,7 +8,7 @@ import (
 )
 
 var sweepCmd = &cobra.Command{
-	Use: "sweep",
+	Use:   "sweep",
 	Short: "Remove all logged AbacatePay accounts",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		if err := config.Sweep(); err != nil {

@@ -11,7 +11,7 @@ import (
 var raw bool
 
 var whoamiCmd = &cobra.Command{
-	Use: "whoami",
+	Use:   "whoami",
 	Short: "View the name of the current profile that you are using",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		config, err := profiles.Load()

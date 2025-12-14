@@ -26,7 +26,7 @@ seamlessly with CI/CD pipelines, local development flows, and production environ
 func Exec() {
 	if err := rootCmd.Execute(); err != nil {
 		logger.Error(err)
-		
+
 		os.Exit(1)
 	}
 }

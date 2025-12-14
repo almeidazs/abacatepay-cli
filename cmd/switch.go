@@ -8,8 +8,8 @@ import (
 )
 
 var switchCmd = &cobra.Command{
-	Use: "switch",
-	Args: cobra.ExactArgs(1),
+	Use:   "switch",
+	Args:  cobra.ExactArgs(1),
 	Short: "Switch to a different profile",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		config, err := profiles.Load()
