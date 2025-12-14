@@ -46,7 +46,7 @@ func backoff(attempt int) time.Duration {
 	max := 2 * time.Second
 	base := 200 * time.Millisecond
 
-	duration := min(base * time.Duration(1<<attempt), max)
+	duration := min(base*time.Duration(1<<attempt), max)
 
 	jitter := time.Duration(rand.Int63n(int64(duration / 2)))
 
@@ -71,7 +71,6 @@ func (c *Client) Post(route string, body any) (map[string]any, error) {
 	return c.Make(http.MethodPost, route, body)
 }
 
-
 func (c *Client) Make(
 	method string,
 	route string,
@@ -82,7 +81,7 @@ func (c *Client) Make(
 
 	if body != nil {
 		bodyBytes, err = json.Marshal(body)
-		
+
 		if err != nil {
 			return nil, err
 		}
